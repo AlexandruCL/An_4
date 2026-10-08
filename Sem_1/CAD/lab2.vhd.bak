@@ -1,0 +1,88 @@
+ENTITY clk_gen IS
+	GENERIC(t_high: TIME:=30 ns; t_period: TIME:=50 ns; t_reset: TIME:=10 ns);
+	PORT(clock: OUT BIT:='1'; reset : OUT BIT);
+END clk_gen;
+
+ARCHITECTURE behave OF clk_gen IS
+BEGIN
+	reset<='0', '1' AFTER t_reset;
+	
+	PROCESS
+	BEGIN
+	--next 3 lines suspend the process if the simulation time is > 10 micro seconds.
+		--if Now > 10 us then
+		--	wait;
+		--end if;
+
+		clock<='1', '0' AFTER t_high;
+		WAIT FOR t_period;
+	END PROCESS;
+END ARCHITECTURE;
+
+ENTITY counter1 IS
+	GENERIC( delay: TIME := 10 ns;
+		MAX_VAL: INTEGER :=4);
+	PORT(clock, reset, load: IN BIT;
+		parallel_in: IN INTEGER;
+		output: OUT INTEGER;
+		ovr: OUT BIT);
+END counter1;
+
+ARCHITECTURE behave OF counter1 IS
+--declaratii de semnale, componente, etc
+-- signal declarations, component declarations, etc
+BEGIN
+
+PROCESS( clock, reset)
+	VARIABLE temp: INTEGER;
+BEGIN
+
+	IF reset='0' THEN
+		temp := 0;
+	ELSIF clock='1' AND clock'EVENT and clock'LAST_VALUE='0' THEN
+		IF load='1' THEN
+			temp := parallel_in;
+		ELSE
+			temp := temp+1;
+		END IF;
+	END IF;
+
+	output <= temp AFTER delay;
+END PROCESS;
+
+END ARCHITECTURE behave;
+
+ENTITY test IS
+
+END test;
+
+ARCHITECTURE struct OF test IS
+
+	COMPONENT counter1 IS
+		GENERIC( delay: TIME := 10 ns);
+		PORT(clock, reset, load: IN BIT;
+			parallel_in: IN INTEGER;
+			output: OUT INTEGER);
+	END COMPONENT;
+
+	COMPONENT  clk_gen IS
+		GENERIC(t_high: TIME:=30 ns; t_period: TIME:=50 ns; t_reset: TIME:=10 ns);
+		PORT(clock: OUT BIT:='1'; reset : OUT BIT);
+	END COMPONENT;
+
+	SIGNAL clock_s, reset_s, load_s : BIT;
+	SIGNAL parallel_in_s: INTEGER := -5;
+
+	SIGNAL output_s : INTEGER;
+BEGIN
+
+et1: counter1 GENERIC MAP(delay => 5 ns) 
+	PORT MAP ( clock => clock_s, reset => reset_s, load => load_s, parallel_in => parallel_in_s, output => output_s);
+
+et2: clk_gen GENERIC MAP (t_high => 40ns, t_period => 100ns, t_reset => 30ns) PORT MAP (clock => clock_s, reset => reset_s );
+
+load_s <='0', '1' after 240 ns, '0' AFTER 440 ns;
+
+parallel_in_s <= 100 AFTER 150 ns;
+
+END struct; 

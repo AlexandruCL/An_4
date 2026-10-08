@@ -1,0 +1,185 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+Eclk_gen
+Z0 w1791459091
+Z1 dD:/An_4/Sem_1/CAD
+Z2 8D:/An_4/Sem_1/CAD/lab2.vhd
+Z3 FD:/An_4/Sem_1/CAD/lab2.vhd
+l0
+L1
+VMji0Z^hMQEJf6j]57KMG03
+!s100 ^VA8WRC9_z?hdTkT@9e8>0
+Z4 OV;C;10.5b;63
+32
+Z5 !s110 1791459450
+!i10b 1
+Z6 !s108 1791459450.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/An_4/Sem_1/CAD/lab2.vhd|
+Z8 !s107 D:/An_4/Sem_1/CAD/lab2.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Abehave
+Z11 DEx4 work 7 clk_gen 0 22 Mji0Z^hMQEJf6j]57KMG03
+l7
+L6
+Z12 VgSVhE7oL_z8RPa`6A198S3
+Z13 !s100 M6WAB9MehR><=aaj_X^RJ1
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Ecounter1
+R0
+R1
+R2
+R3
+l0
+L22
+V4znhf;6cz9R7cL^^gNJYi0
+!s100 0]I_Ca6]TF7OKB:@baMjP0
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Abehave
+Z14 DEx4 work 8 counter1 0 22 4znhf;6cz9R7cL^^gNJYi0
+l35
+L32
+Z15 V]il4Ia0d517eGkZQ89D2`1
+Z16 !s100 RRI`@J<NRX?bSLk6HFZ;V1
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Einverter
+Z17 w1791291288
+R1
+R2
+R3
+l0
+L19
+V`JW:Ad0kR37`fm[BANW:20
+!s100 am:TB3:jWkK<C1K4S_9lG0
+R4
+32
+Z18 !s110 1791291293
+!i10b 1
+Z19 !s108 1791291293.000000
+R7
+R8
+!i113 1
+R9
+R10
+Abehave
+DEx4 work 8 inverter 0 22 `JW:Ad0kR37`fm[BANW:20
+l27
+L25
+VTH>e[i3EzzT1nKzh05iFF2
+!s100 5Hf@Z6<6iH28@m>]BXe<Z3
+R4
+32
+R18
+!i10b 1
+R19
+R7
+R8
+!i113 1
+R9
+R10
+Etest
+R0
+R1
+R2
+R3
+l0
+L72
+VeD917VMm@zcV<lMDk?g`D1
+!s100 OnRlb[oa<n?nIN2PL?XmI2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Astruct
+Z20 DEx4 work 4 test 0 22 eD917VMm@zcV<lMDk?g`D1
+l102
+L76
+Z21 VI95oK6cNH6GUZHh[mDCYR0
+Z22 !s100 Y`>i<XnI84i70dWaeX>9b3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Exor2
+R17
+R1
+R2
+R3
+l0
+L5
+V2RHQQIc^FP]mJeBCa68_d0
+!s100 Ik6Wz:TZ04JJ>hdUmiMb?0
+R4
+32
+R18
+!i10b 1
+R19
+R7
+R8
+!i113 1
+R9
+R10
+Abehave
+DEx4 work 4 xor2 0 22 2RHQQIc^FP]mJeBCa68_d0
+l15
+L11
+V>]fb^0iaT=5c6^6^j`zng0
+!s100 ALV<<Pe:@4fn9o8a8Cj]D1
+R4
+32
+R18
+!i10b 1
+R19
+R7
+R8
+!i113 1
+R9
+R10
