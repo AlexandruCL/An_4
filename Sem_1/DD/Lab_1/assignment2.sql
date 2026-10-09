@@ -66,6 +66,18 @@ SELECT '[' ||
        )
  ORDER BY T_ID;
 
+--  SELECT '[' ||
+--        REGEXP_REPLACE(Authors, '[^A-Z]','')||
+--        SUBSTR(TO_CHAR(Year), 3, 2) ||
+--        '] ' ||
+--        Authors || ', "' ||
+--        Title || '", ' ||
+--        Publisher || ', ' ||
+--        TO_CHAR(Year) || ', ' ||
+--        TO_CHAR(Page_number) || ' pgs.'  AS Reference
+--   FROM Book_title
+--  ORDER BY T_ID;
+
 SELECT bt.T_ID,
        bt.Title,
        bt.Publisher,
