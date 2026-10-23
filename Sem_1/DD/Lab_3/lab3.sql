@@ -82,7 +82,7 @@ INSERT INTO Book_copy VALUES (601, 60, 2,    DATE '2026-09-12', NULL);
 INSERT INTO Book_copy VALUES (602, 60, NULL, NULL,              NULL);
 
 
-CREATE SEQUENCE borrow_seq START WITH 1 INCREMENT BY 1 NOCACHE;
+CREATE SEQUENCE borrow_seq START WITH 1 INCREMENT BY 1;
 
 SELECT borrow_seq.NEXTVAL AS Nr,
        s.Name             AS Student_name,
